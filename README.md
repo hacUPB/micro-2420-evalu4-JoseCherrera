@@ -7,12 +7,12 @@
 
 El codigo llamado Led_blinky es el la actividad extra , la cual es un un led que tiene un tiempo de apagado que ingrese el usuario y su conteo lo genera el RTC(Real Time Clock)
 
-# Explicacion de codigo 
+## Explicacion de codigo 
 
-# Proyecto LCD Control - Documentación
+## Proyecto LCD Control - Documentación
 Este proyecto implementa una interfaz de control para un LCD a través de una estructura modular en C, utilizando archivos de encabezado y fuentes para organizar las funcionalidades de alto y bajo nivel. A continuación, se describe el propósito y funcionamiento de cada archivo en el proyecto.
 
-# `API.c`
+## `API.c`
 
 **Propósito**: Este archivo implementa la capa de alto nivel del programa, proporcionando funciones que abstraen las complejidades del hardware y permiten interactuar con el LCD de manera sencilla. La interfaz en `API.c` permite inicializar el LCD, limpiar la pantalla, establecer la posición del cursor, y mostrar texto.
 
@@ -96,7 +96,7 @@ void lcd_activate_right(void) // Activa el controlador derecho del LCD, que cont
 
 
 ```
- # `HAL.c`
+ ## `HAL.c`
 
 - **Propósito**: Este archivo es la Capa de Abstracción de Hardware (HAL, por sus siglas en inglés). Define funciones para controlar pines GPIO y manipular directamente el hardware del microcontrolador. Estas funciones permiten escribir valores en pines, configurar su dirección (entrada o salida), y generar retardos.
 
