@@ -16,7 +16,7 @@ Este proyecto implementa una interfaz de control para un LCD a través de una es
 
 **Propósito**: Este archivo implementa la capa de alto nivel del programa, proporcionando funciones que abstraen las complejidades del hardware y permiten interactuar con el LCD de manera sencilla. La interfaz en `API.c` permite inicializar el LCD, limpiar la pantalla, establecer la posición del cursor, y mostrar texto.
 
-# Código Explicado:
+### Código Explicado:
 ```c
 #include "API.h"       // Incluye la API que define las funciones de alto nivel para controlar el LCD
 #include "HAL.h"       // Incluye funciones de bajo nivel para controlar los pines del microcontrolador
@@ -100,7 +100,7 @@ void lcd_activate_right(void) // Activa el controlador derecho del LCD, que cont
 
 - **Propósito**: Este archivo es la Capa de Abstracción de Hardware (HAL, por sus siglas en inglés). Define funciones para controlar pines GPIO y manipular directamente el hardware del microcontrolador. Estas funciones permiten escribir valores en pines, configurar su dirección (entrada o salida), y generar retardos.
 
-# Código Explicado
+### Código Explicado
 ```c
 #include "API.h"       // Incluye la API para manejar funciones de alto nivel del LCD.
 #include "HAL.h"       // Incluye funciones de bajo nivel para manipular los pines GPIO.
@@ -159,7 +159,7 @@ void HAL_Delay(uint32_t tiempo) // Genera un retardo en nanosegundos
 
 - **Propósito:** `LOW_LEVEL.c` implementa funciones específicas para enviar comandos y datos al LCD a nivel de bits. Este archivo convierte cada byte en bits individuales y maneja la configuración de los pines para el modo de comando o de datos en el LCD.
 
-# Código Explicado
+### Código Explicado
 ```c
 #include "API.h"       // Incluye la API para manejar el LCD.
 #include "HAL.h"       // Incluye funciones de bajo nivel para manipular los pines.
@@ -233,7 +233,7 @@ void send_data_or_command(int bits[8], int is_data) // Envía un arreglo de 8 bi
 
 - **Propósito:** Declara las funciones de alto nivel para controlar el LCD, proporcionando una interfaz para inicializar, limpiar, y escribir en el LCD.
 
-# Contenido del Archivo
+### Contenido del Archivo
 
 ```c
 #ifndef API_H
@@ -255,7 +255,7 @@ void lcd_activate_right(void);
 
 - **Propósito:** Proporciona las declaraciones de las funciones de abstracción de hardware y define los pines específicos para la configuración del LCD.
 
-# Contenido del Archivo
+### Contenido del Archivo
 ```c
 #ifndef HAL_H
 #define HAL_H
@@ -287,7 +287,7 @@ void HAL_Delay(uint32_t time_ns);
 
 - **Propósito:** Define las funciones de bajo nivel para enviar comandos y datos al LCD, así como la función `send_data_or_command`.
 
-Contenido del Archivo
+### Contenido del Archivo
 
 ```c
 #ifndef LOW_LEVEL_H
@@ -313,7 +313,7 @@ void Set_Data_Input(void);   // Declaración de la función
 
 - **Propósito:** Este archivo contiene el main del programa y realiza la configuración inicial del sistema, además de invocar las funciones para interactuar con el LCD.
 
-Código Explicado
+### Código Explicado
 
 ```c
 #include "API.h"
